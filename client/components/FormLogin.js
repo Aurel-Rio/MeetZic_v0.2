@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { FormLogin } from './components/FormLogin.js';
+
+const path = require('path');
+
 function LoginForm() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
