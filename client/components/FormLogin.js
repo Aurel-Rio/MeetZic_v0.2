@@ -34,4 +34,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+module.exports = FormLogin;

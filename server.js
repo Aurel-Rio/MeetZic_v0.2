@@ -42,6 +42,26 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get('/', function(req, res) {
+  const FormLogin = require('./client/components/FormLogin');
+  const html = `<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <title>Meet'Zic</title>
+    </head>
+    <body>
+      <section class="Welcome">
+        <h4>Bienvenue sur Meet'Zic</h4>
+      </section>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+      <script type="module" src="./client/components/FormLogin.js"></script>
+    </body>
+  </html>
+  `;
+  res.send(html);
 });
