@@ -3,6 +3,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
+require('@babel/register')({
+  presets: ['@babel/preset-env', '@babel/preset-react']
+});
 
 const app = express();
 

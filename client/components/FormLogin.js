@@ -34,4 +34,4 @@ function LoginForm() {
   );
 }
 
-module.exports = FormLogin;
+module.exports = LoginForm;
